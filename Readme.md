@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/MapControl_SearchProcessing/Form1.cs) (VB: [Form1.vb](./VB/MapControl_SearchProcessing/Form1.vb))
+* [Program.cs](./CS/MapControl_SearchProcessing/Program.cs) (VB: [Program.vb](./VB/MapControl_SearchProcessing/Program.vb))
+<!-- default file list end -->
 # Manually generate map items for location information received from the Bing Search provider
 
 
