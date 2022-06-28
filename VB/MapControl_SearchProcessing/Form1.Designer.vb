@@ -66,7 +66,7 @@
             Me.mapControl.Layers.Add(Me.SearchLayer)
             Me.mapControl.Location = New System.Drawing.Point(6, 6)
             Me.mapControl.Name = "mapControl"
-            Me.mapControl.ShowSearchPanel = False
+            Me.mapControl.SearchPanelOptions.Visible = false
             Me.mapControl.Size = New System.Drawing.Size(396, 316)
             Me.mapControl.TabIndex = 0
             ' 
