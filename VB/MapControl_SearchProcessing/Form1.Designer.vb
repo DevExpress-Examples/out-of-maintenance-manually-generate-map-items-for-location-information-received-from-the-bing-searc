@@ -1,5 +1,7 @@
-﻿Namespace MapControl_SearchProcessing
-    Partial Public Class Form1
+Namespace MapControl_SearchProcessing
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -39,16 +41,16 @@
             Me.lciSearchResults = New DevExpress.XtraLayout.LayoutControlItem()
             Me.lciKeyword = New DevExpress.XtraLayout.LayoutControlItem()
             Me.layoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
-            CType(Me.mapControl, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.layoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.mapControl), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.layoutControl1.SuspendLayout()
-            CType(Me.teKeyword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.meResult.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.layoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.lciSearchResults, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.lciKeyword, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.layoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.teKeyword.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.meResult.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciSearchResults), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciKeyword), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem5), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' TilesLayer
@@ -66,7 +68,7 @@
             Me.mapControl.Layers.Add(Me.SearchLayer)
             Me.mapControl.Location = New System.Drawing.Point(6, 6)
             Me.mapControl.Name = "mapControl"
-            Me.mapControl.SearchPanelOptions.Visible = false
+            Me.mapControl.SearchPanelOptions.Visible = False
             Me.mapControl.Size = New System.Drawing.Size(396, 316)
             Me.mapControl.TabIndex = 0
             ' 
@@ -96,6 +98,7 @@
             Me.btnSearch.StyleController = Me.layoutControl1
             Me.btnSearch.TabIndex = 7
             Me.btnSearch.Text = "Search"
+            AddHandler Me.btnSearch.Click, New System.EventHandler(AddressOf Me.btnSearch_Click)
             ' 
             ' teKeyword
             ' 
@@ -115,9 +118,9 @@
             ' 
             ' layoutControlGroup1
             ' 
-            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True
+            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
             Me.layoutControlGroup1.GroupBordersVisible = False
-            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() { Me.layoutControlItem1, Me.lciSearchResults, Me.lciKeyword, Me.layoutControlItem5})
+            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutControlItem1, Me.lciSearchResults, Me.lciKeyword, Me.layoutControlItem5})
             Me.layoutControlGroup1.Location = New System.Drawing.Point(0, 0)
             Me.layoutControlGroup1.Name = "layoutControlGroup1"
             Me.layoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(4, 4, 4, 4)
@@ -170,37 +173,48 @@
             Me.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None
             Me.Name = "Form1"
             Me.Text = "Search Result Processing Example"
-            CType(Me.mapControl, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.layoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.mapControl), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.layoutControl1.ResumeLayout(False)
-            CType(Me.teKeyword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.meResult.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.layoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.lciSearchResults, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.lciKeyword, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.layoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.teKeyword.Properties), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.meResult.Properties), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciSearchResults), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciKeyword), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem5), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+#End Region
         Private mapControl As DevExpress.XtraMap.MapControl
+
         Private defaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
+
         Private layoutControl1 As DevExpress.XtraLayout.LayoutControl
-        Private WithEvents btnSearch As DevExpress.XtraEditors.SimpleButton
+
+        Private btnSearch As DevExpress.XtraEditors.SimpleButton
+
         Private teKeyword As DevExpress.XtraEditors.TextEdit
+
         Private meResult As DevExpress.XtraEditors.MemoEdit
+
         Private layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+
         Private layoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+
         Private lciSearchResults As DevExpress.XtraLayout.LayoutControlItem
+
         Private lciKeyword As DevExpress.XtraLayout.LayoutControlItem
+
         Private layoutControlItem5 As DevExpress.XtraLayout.LayoutControlItem
+
         Private TilesLayer As DevExpress.XtraMap.ImageLayer
+
         Private BingMapDataProvider As DevExpress.XtraMap.BingMapDataProvider
+
         Private SearchLayer As DevExpress.XtraMap.InformationLayer
+
         Private SearchProvider As DevExpress.XtraMap.BingSearchDataProvider
     End Class
 End Namespace
-
