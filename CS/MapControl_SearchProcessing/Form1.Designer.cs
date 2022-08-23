@@ -66,7 +66,7 @@
             this.mapControl.Layers.Add(this.SearchLayer);
             this.mapControl.Location = new System.Drawing.Point(6, 6);
             this.mapControl.Name = "mapControl";
-            this.mapControl.SearchPanelOptions.Visible = false;
+            this.mapControl.ShowSearchPanel = false;
             this.mapControl.Size = new System.Drawing.Size(396, 316);
             this.mapControl.TabIndex = 0;
             // 
